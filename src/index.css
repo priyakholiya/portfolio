@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Space Grotesk', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M3 3L11 21L14 14L21 11L3 3Z' fill='%23FF5C39' stroke='%23141414' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E"), auto;
+    background-color: #FDF6EC;
+    color: #3A362F;
+    overflow-x: hidden;
+  }
+
+  a, button, select, input[type="submit"], input[type="button"], [role="button"], .cursor-pointer, [style*="cursor: pointer"], [style*="cursor:pointer"] {
+    cursor: url("/custom-cursor-24.png") 9 1, pointer !important;
+  }
+}
+
+/* Scrapbook grain / noise overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.055;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 14px;
+  background-color: #FDF6EC;
+}
+
+::-webkit-scrollbar-track {
+  border-left: 3px solid #141414;
+  background-color: #FFE066; /* butter yellow track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF5C39; /* hot coral thumb */
+  border: 3px solid #141414;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FFB3C6; /* bubblegum pink on hover */
+}
+
+/* Torn paper borders */
+.torn-border-bottom {
+  position: relative;
+}
+
+.torn-border-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none' width='100%25' height='10px'%3E%3Cpath d='M0,0 L1200,0 L1200,40 L1180,60 L1160,30 L1140,55 L1120,35 L1100,50 L1080,30 L1060,55 L1040,35 L1020,60 L1000,30 L980,50 L960,30 L940,55 L920,35 L900,50 L880,30 L860,55 L840,35 L820,60 L800,30 L780,50 L760,30 L740,55 L720,35 L700,50 L680,30 L660,55 L640,35 L620,60 L600,30 L580,50 L560,30 L540,55 L520,35 L500,50 L480,30 L460,55 L440,35 L420,60 L400,30 L380,50 L360,30 L340,55 L320,35 L300,50 L280,30 L260,55 L240,35 L220,60 L200,30 L180,50 L160,30 L140,55 L120,35 L100,50 L80,30 L60,55 L40,35 L20,60 L0,30 Z' fill='%23FDF6EC'/%3E%3C/svg%3E");
+  background-size: 40px 10px;
+  background-repeat: repeat-x;
+  z-index: 10;
+}
+
+/* Washi tape details */
+.washi-tape {
+  background-color: rgba(255, 179, 198, 0.7); /* Pinky washi tape */
+  backdrop-filter: blur(1px);
+  border-left: 2px dashed rgba(20, 20, 20, 0.3);
+  border-right: 2px dashed rgba(20, 20, 20, 0.3);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+.washi-tape-yellow {
+  background-color: rgba(255, 224, 102, 0.7); /* Yellowy washi tape */
+  backdrop-filter: blur(1px);
+  border-left: 2px dashed rgba(20, 20, 20, 0.3);
+  border-right: 2px dashed rgba(20, 20, 20, 0.3);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Squiggle hover effect */
+.squiggle-hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.squiggle-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  left: 0;
+  bottom: -4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q10,0 20,5 T40,5 T60,5 T80,5 T100,5' fill='none' stroke='%23FF5C39' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.squiggle-hover:hover::after {
+  transform: scaleX(1);
+}
