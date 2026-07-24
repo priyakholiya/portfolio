@@ -82,7 +82,7 @@ export default function Hero() {
           transition={{ type: 'spring', stiffness: 100, delay: 0.15 }}
           className="relative inline-block origin-left mb-4 mt-8"
         >
-          <h1 className="font-display text-7xl md:text-8xl font-extrabold text-ink tracking-wide leading-none select-none drop-shadow-sm pt-2">
+          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl font-extrabold text-ink tracking-wide leading-none select-none drop-shadow-sm pt-2">
             Hi, I'm{' '}
             <span className="relative inline-block">
               <span className="text-coral underline decoration-ink decoration-wavy decoration-3 underline-offset-8">
@@ -224,7 +224,7 @@ export default function Hero() {
           </div>
 
           {/* Polaroid Card Frame */}
-          <div className="relative bg-cream border-3 border-ink p-4 pb-12 w-72 md:w-80 shadow-brutal rotate-3 hover:rotate-[-1deg] hover:scale-[1.03] hover:shadow-xl hover:shadow-ink/10 transition-all duration-300 z-10">
+          <div className="relative bg-cream border-3 border-ink p-4 pb-12 w-full max-w-[280px] sm:max-w-[320px] shadow-brutal rotate-3 hover:rotate-[-1deg] hover:scale-[1.03] hover:shadow-xl hover:shadow-ink/10 transition-all duration-300 z-10">
             {/* Washi Tape Corner at top-left */}
             <div className="absolute -top-6 -left-8 washi-tape px-6 py-2 rotate-[-25deg] z-20 font-mono text-[10px] text-ink select-none font-bold">
               PRIYA KHOLIYA

@@ -41,6 +41,10 @@ const projectsData = [
       color: 'bg-mint'
     },
     keyFeatures: {
+      customerLabel: 'Customer Storefront',
+      customerIcon: '👤',
+      adminLabel: 'Admin Dashboard',
+      adminIcon: '🛡️',
       customer: [
         'Browse Products',
         'Product Details',
@@ -68,65 +72,100 @@ const projectsData = [
   },
   {
     id: 'restaurant',
-    title: 'Restaurant Website',
-    caseFileLabel: 'CASE FILE : RESTAURANT',
-    sub: 'Trendy Street-Food Menu & Reservation Platform',
-    image: '/restaurant_project.png',
-    badges: ['Solo Project', '2 Weeks', 'Responsive'],
-    description: 'A vibrant brutalist website for a street-food diner. The platform integrates interactive table bookings, live dish customizations, and smooth animations that make food ordering feel tactile and responsive.',
-    overview: 'Designed and developed a vibrant brutalist website for a street-food diner. The platform integrates interactive table bookings, live dish customizations, and smooth animations that make food ordering feel tactile and responsive.',
+    title: 'Chill & Grill',
+    caseFileLabel: 'CASE FILE : CHILL & GRILL',
+    sub: 'Premium Restaurant & Food Ordering Web Application',
+    image: '/restaurant_project_new.png',
+    badges: ['Frontend Project', 'Responsive Design', 'Interactive UI'],
+    description: 'Chill & Grill is a premium restaurant web application designed to deliver an engaging digital dining experience. The platform allows users to browse an interactive menu, explore food galleries, manage a shopping cart, and place orders through a responsive interface with light and dark theme support.',
+    overview: 'Chill & Grill is a premium restaurant web application designed to deliver an engaging digital dining experience. The platform allows users to browse an interactive menu, explore food galleries, manage a shopping cart, and place orders through a responsive interface with light and dark theme support.',
     tech: ['Frontend', 'Interactive', 'Responsive'],
-    techStackTags: ['React', 'Vite', 'Tailwind CSS', 'CSS Variables', 'Framer Motion', 'Firebase', 'GitHub'],
+    techStackTags: ['HTML5', 'CSS3', 'JavaScript (ES6)', 'Font Awesome', 'Google Fonts', 'Local Storage API'],
     link: 'https://chill-and-grill.vercel.app',
     rotation: 'rotate-3',
     color: 'bg-lilac',
     problemCard: {
       title: 'Problem',
-      content: 'Local street diners struggle to capture reservation requests and showcase their daily specials interactively, losing tech-savvy customers to larger chains.',
+      content: 'Traditional restaurant websites often provide static menus with limited interaction, making food discovery and ordering less engaging.',
       color: 'bg-pinky'
     },
     solutionCard: {
       title: 'Solution',
-      content: 'Developed a custom brutalist web application with a live digital menu, variant customization flow, interactive booking system, and admin dashboard queue.',
+      content: 'Designed and developed a modern restaurant interface featuring interactive menus, a dynamic shopping cart, responsive layouts, dark/light themes, and user interactions using HTML, CSS, and JavaScript.',
       color: 'bg-lilac'
     },
     impactCard: {
-      title: 'Impact',
+      title: 'Outcome',
       content: [
-        'Tactile menu animations',
-        'Real-time table reservation',
-        'Custom dish variations picker',
-        'Integrated Firebase database',
-        'Brutalist brand identity',
-        'Optimized page response times'
+        'Premium Restaurant UI',
+        'Interactive Ordering Experience',
+        'Responsive Layout',
+        'Dynamic Shopping Cart',
+        'Theme Toggle',
+        'Modern Frontend Architecture'
       ],
       color: 'bg-mint'
     },
     keyFeatures: {
+      customerLabel: 'Customer Experience',
+      customerIcon: '🍳',
+      adminLabel: 'Food Gallery & Design',
+      adminIcon: '🖼️',
       customer: [
-        'Interactive Menu',
-        'Live Customization',
-        'Table Reservation',
-        'Tactile Animations',
-        'Mobile First Design',
-        'Fast Load Speeds'
+        'Interactive Food Menu',
+        'Category Navigation',
+        'Shopping Cart',
+        'Checkout Form',
+        'Search Functionality'
       ],
       admin: [
-        'Reservation Queue',
-        'Menu Item Management',
-        'Customizer Variables',
-        'Kitchen Printer Dashboard',
-        'Inquiry Messages'
+        'Food Gallery',
+        'Lightbox Preview',
+        'Responsive Design',
+        'Dark / Light Theme'
       ]
     },
     highlights: [
       'UI/UX Design',
-      'Tactile Interactive Dev',
-      'Real-time DB Integration',
-      'Brutalist Brand Strategy',
-      'Responsive Design'
+      'Frontend Development',
+      'Responsive Layout Design',
+      'JavaScript Functionality',
+      'Shopping Cart Logic',
+      'Theme Management',
+      'Performance Optimization'
     ],
-    footerTech: 'React • Tailwind CSS • Framer Motion • Firebase'
+    roleHeader: 'My Role',
+    highlightsCards: [
+      {
+        title: 'Responsive UI',
+        content: 'Works across desktop, tablet, and mobile devices.',
+        color: 'bg-[#FFF0F2]',
+        tapeColor: 'bg-[#FFB3C6]/60',
+        rotate: 'rotate-[-1.5deg]'
+      },
+      {
+        title: 'Dynamic Shopping Cart',
+        content: 'Real-time cart updates and order management.',
+        color: 'bg-[#F3EBFD]',
+        tapeColor: 'bg-[#C9B6F2]/60',
+        rotate: 'rotate-[2deg]'
+      },
+      {
+        title: 'Dark & Light Mode',
+        content: 'Theme preference saved using Local Storage.',
+        color: 'bg-[#EBF7F2]',
+        tapeColor: 'bg-[#A1E3C9]/50',
+        rotate: 'rotate-[-2deg]'
+      },
+      {
+        title: 'Interactive Experience',
+        content: 'Smooth animations, search, gallery, and hover effects.',
+        color: 'bg-[#FFF9C4]/80',
+        tapeColor: 'bg-[#FFE066]/60',
+        rotate: 'rotate-[1.5deg]'
+      }
+    ],
+    footerTech: 'HTML • CSS • JavaScript'
   }
 ];
 
@@ -373,68 +412,123 @@ export default function Projects() {
 
                 </div>
 
-                {/* Section: Tech Stack */}
-                <div className="space-y-3 relative z-10">
-                  <h4 className="font-mono text-xs font-black text-ink bg-lilac border border-ink/40 px-2.5 py-0.5 uppercase tracking-wider inline-block rotate-[1deg]">
-                    ✦ Tech Stack
-                  </h4>
-                  <div className="flex flex-wrap gap-2 bg-white border-2 border-ink p-3.5 shadow-brutal-sm">
-                    {activeCaseStudy.techStackTags.map((tag) => (
-                      <span key={tag} className="px-2.5 py-1 bg-cream border border-ink text-xs font-mono font-bold text-ink hover:-translate-y-0.5 transition-transform duration-200 shadow-[1.5px_1.5px_0px_rgba(20,20,20,1)]">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                {/* Torn paper divider before screenshots */}
+                <div className="w-full border-t-2 border-dashed border-ink/30 my-6 relative z-10" />
 
-                {/* Section: Key Features */}
-                <div className="space-y-3 relative z-10">
-                  <h4 className="font-mono text-xs font-black text-ink bg-mint border border-ink/40 px-2.5 py-0.5 uppercase tracking-wider inline-block rotate-[-1.5deg]">
-                    ✦ Key Features
+                {/* Section: Screenshots Collage */}
+                <div className="space-y-4 relative z-10">
+                  <h4 className="font-mono text-xs font-black text-ink bg-coral text-cream border border-ink/40 px-2.5 py-0.5 uppercase tracking-wider inline-block rotate-[1deg]">
+                    ✦ Screenshots Case Collage
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white border-2 border-ink p-6 shadow-brutal-sm">
-                    {/* Customer Facing */}
-                    <div className="space-y-3">
-                      <div className="border-b-2 border-dashed border-ink/20 pb-1 flex items-center gap-1.5">
-                        <span className="text-sm">👤</span>
-                        <span className="font-display text-base font-bold text-ink">Customer</span>
-                      </div>
-                      <ul className="space-y-2">
-                        {activeCaseStudy.keyFeatures.customer.map((feat) => (
-                          <li key={feat} className="font-mono text-xs font-semibold text-charcoal flex items-center gap-2 pl-1.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-coral shrink-0" />
-                            <span>{feat}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  <div className="bg-cream border-2 border-ink p-4 md:p-6 shadow-brutal-sm relative rounded-sm flex flex-col items-center">
+                    {/* Washi tape decoration */}
+                    <div className="absolute -top-3 left-[15%] washi-tape px-6 py-1 border border-ink/20 rotate-[-2deg] text-[10px] font-mono font-bold text-ink z-10">
+                      CASE FILE COLLAGE
                     </div>
-                    
-                    {/* Admin Dashboard */}
-                    <div className="space-y-3">
-                      <div className="border-b-2 border-dashed border-ink/20 pb-1 flex items-center gap-1.5">
-                        <span className="text-sm">🛡️</span>
-                        <span className="font-display text-base font-bold text-ink">Admin</span>
-                      </div>
-                      <ul className="space-y-2">
-                        {activeCaseStudy.keyFeatures.admin.map((feat) => (
-                          <li key={feat} className="font-mono text-xs font-semibold text-charcoal flex items-center gap-2 pl-1.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
-                            <span>{feat}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="w-full border-2 border-ink bg-white p-3 md:p-5 shadow-brutal-sm rotate-[0.5deg]">
+                      <img 
+                        src={activeCaseStudy.image} 
+                        alt={`${activeCaseStudy.title} screenshots collage`}
+                        className="w-full h-auto object-contain hover:scale-[1.01] transition-transform duration-300"
+                      />
                     </div>
                   </div>
                 </div>
 
-                {/* Section: Project Highlights */}
+                {/* Torn paper divider after screenshots */}
+                <div className="w-full border-t-2 border-dashed border-ink/30 my-6 relative z-10" />
+
+              {/* Section: Tech Stack */}
+              <div className="space-y-3 relative z-10">
+                <h4 className="font-mono text-xs font-black text-ink bg-lilac border border-ink/40 px-2.5 py-0.5 uppercase tracking-wider inline-block rotate-[1deg]">
+                  ✦ Tech Stack
+                </h4>
+                <div className="flex flex-wrap gap-2 bg-white border-2 border-ink p-3.5 shadow-brutal-sm">
+                  {activeCaseStudy.techStackTags.map((tag) => (
+                    <span key={tag} className="px-2.5 py-1 bg-cream border border-ink text-xs font-mono font-bold text-ink hover:-translate-y-0.5 transition-transform duration-200 shadow-[1.5px_1.5px_0px_rgba(20,20,20,1)]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Section: Key Features */}
+              <div className="space-y-3 relative z-10">
+                <h4 className="font-mono text-xs font-black text-ink bg-mint border border-ink/40 px-2.5 py-0.5 uppercase tracking-wider inline-block rotate-[-1.5deg]">
+                  ✦ Key Features
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white border-2 border-ink p-6 shadow-brutal-sm">
+                  {/* Left Column (e.g. Customer) */}
+                  <div className="space-y-3">
+                    <div className="border-b-2 border-dashed border-ink/20 pb-1 flex items-center gap-1.5">
+                      <span className="text-sm">{activeCaseStudy.keyFeatures.customerIcon || '👤'}</span>
+                      <span className="font-display text-base font-bold text-ink">{activeCaseStudy.keyFeatures.customerLabel || 'Customer'}</span>
+                    </div>
+                    <ul className="space-y-2">
+                      {activeCaseStudy.keyFeatures.customer.map((feat) => (
+                        <li key={feat} className="font-mono text-xs font-semibold text-charcoal flex items-center gap-2 pl-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-coral shrink-0" />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  {/* Right Column (e.g. Admin/Design) */}
+                  <div className="space-y-3">
+                    <div className="border-b-2 border-dashed border-ink/20 pb-1 flex items-center gap-1.5">
+                      <span className="text-sm">{activeCaseStudy.keyFeatures.adminIcon || '🛡️'}</span>
+                      <span className="font-display text-base font-bold text-ink">{activeCaseStudy.keyFeatures.adminLabel || 'Admin'}</span>
+                    </div>
+                    <ul className="space-y-2">
+                      {activeCaseStudy.keyFeatures.admin.map((feat) => (
+                        <li key={feat} className="font-mono text-xs font-semibold text-charcoal flex items-center gap-2 pl-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+                {/* Section: Project Highlights Cards */}
+                {activeCaseStudy.highlightsCards && (
+                  <div className="space-y-4 relative z-10 pt-4">
+                    <h4 className="font-mono text-xs font-black text-ink bg-coral text-cream border border-ink/40 px-2.5 py-0.5 uppercase tracking-wider inline-block rotate-[-1deg]">
+                      ✦ Key Project Highlights
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                      {activeCaseStudy.highlightsCards.map((card) => (
+                        <motion.div
+                          key={card.title}
+                          whileHover={{ y: -4, rotate: 0 }}
+                          className={`${card.color} border-2 border-ink p-5 shadow-brutal-sm relative min-h-[140px] ${card.rotate} flex flex-col justify-between`}
+                        >
+                          {/* Washi tape decoration */}
+                          <div className={`absolute -top-2.5 left-6 w-12 h-4.5 ${card.tapeColor} border border-ink/10 rotate-[-3deg] shadow-sm z-20`} />
+                          <div>
+                            <h5 className="font-display text-[18px] font-black text-ink mb-1 border-b border-ink/20 pb-1">
+                              {card.title}
+                            </h5>
+                            <p className="font-body text-[11px] font-semibold text-charcoal leading-relaxed">
+                              {card.content}
+                            </p>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Section: Project Highlights / My Role */}
                 <div className="space-y-3 relative z-10">
                   <h4 className="font-mono text-xs font-black text-ink bg-[#FFF3E0] border border-ink/40 px-2.5 py-0.5 uppercase tracking-wider inline-block rotate-[2deg]">
-                    ✦ Project Highlights
+                    ✦ {activeCaseStudy.roleHeader === 'My Role' ? 'My Role' : 'Project Highlights'}
                   </h4>
                   <div className="bg-[#FFF9C4]/80 border-2 border-ink p-5 shadow-brutal-sm rotate-[-0.5deg]">
                     <div className="font-display text-sm font-black text-ink mb-2 pb-1 border-b border-dashed border-ink/30">
-                      Role
+                      {activeCaseStudy.roleHeader || 'Role'}
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                       {activeCaseStudy.highlights.map((highlight) => (

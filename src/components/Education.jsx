@@ -293,7 +293,7 @@ export default function Education() {
                   ].map((skill, index) => (
                     <div key={index} className="flex justify-between items-center border-b border-dashed border-ink/10 py-1">
                       <span className="font-bold text-ink mr-2">{skill.name}</span>
-                      <span className="font-extrabold text-[13px] tracking-widest shrink-0 select-none">
+                      <span className="font-extrabold text-[13px] tracking-widest shrink-0 select-none whitespace-nowrap">
                         <span className="text-amber-500">{"★".repeat(skill.rating)}</span>
                         <span className="text-zinc-300">{"★".repeat(5 - skill.rating)}</span>
                       </span>

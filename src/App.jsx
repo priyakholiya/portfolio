@@ -74,7 +74,7 @@ function App() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
 
           {/* Logo brand */}
-          <a href="#" className="font-display text-3xl font-black text-ink select-none flex items-center gap-1.5 hover:scale-102 transition-transform group">
+          <a href="#" className="font-display text-xl sm:text-2xl md:text-3xl font-black text-ink select-none flex items-center gap-1.5 hover:scale-102 transition-transform group">
             <span>priya.kholiya</span>
             <motion.span
               className="text-coral inline-block origin-center"
